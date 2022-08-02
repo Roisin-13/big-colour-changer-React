@@ -10,8 +10,8 @@ const useStyles = createUseStyles({
     fontSize: 25,
     color: 'grey',
     width: '100%',
-    height: 150,
-    padding: 50,
+    height: 200,
+    paddingTop: 50,
 },
 navBtn : {
     display: 'inline',
@@ -38,7 +38,7 @@ function Header() {
             <h1>Colour Changer</h1>
             <ul>
                 <li class={classes.navBtn}><Link to='/'>HTML colours</Link></li>
-                <li class={classes.navBtn}><a href="#">RGB colours</a></li>
+                <li class={classes.navBtn}><Link to='body(rgb)'>RGB colours</Link></li>
                 <li class={classes.navBtn}><Link to='/body(hex)'>HEX colours</Link></li>
             </ul>
         </header>
