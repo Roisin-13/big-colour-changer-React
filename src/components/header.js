@@ -9,8 +9,8 @@ const useStyles = createUseStyles({
     fontFamily: '"American Typewriter", serif',
     fontSize: 25,
     color: 'grey',
-    width: '100 %',
-    height: 100,
+    width: '100%',
+    height: 150,
     padding: 50,
 },
 navBtn : {
