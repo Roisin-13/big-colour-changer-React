@@ -36,7 +36,7 @@ function Header() {
         <header class={classes.heady1}>
             <h1>Colour Changer</h1>
             <ul>
-                <li class={classes.navBtn}><a href="./App.js">HTML colours</a></li>
+                <li class={classes.navBtn}><a href="#">HTML colours</a></li>
                 <li class={classes.navBtn}><a href="#">RGB colours</a></li>
                 <li class={classes.navBtn}><a href="#">HEX colours</a></li>
             </ul>

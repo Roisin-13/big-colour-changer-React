@@ -1,42 +1,42 @@
-//import { createUseStyles } from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import {useState} from 'react';
 import data from './htmlcolour.json';
 
+const useStyles = createUseStyles({
+    body : {
+        textAlign: 'center',
+        height: '100vh',
+        width: '100%',
+},
+btn : {
+    display: 'block',
+    alignSelf: 'center',
+    marginTop: '100px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    fontFamily: 'Arial, sans - serif',
+    fontSize: '20px',
+    padding: '10px',
+    color: 'Gainsboro',
+    backgroundColor: 'DimGray',
+    borderRadius: 5,
+    border: 'none',
+},
+});
+
 function BodyHTML() {
-    //const classes = useStyles();
+    const classes = useStyles();
     const [colour, setColour] = useState("white");
     document.body.style.background = colour;
 
     function colourChange() {
-        let randNum = Math.floor(Math.random() * 6);
-         let newPage = "";
-         let newClr = "";
-        if (randNum === 0) {
-            newPage = "red";
-            newClr = "Red";
-        } else if (randNum === 1) {
-            newPage = "blue";
-            newClr = "Blue";
-        } else if (randNum === 2) {
-            newPage = "pink";
-            newClr = "Pink";
-        } else if (randNum === 3) {
-            newPage = "yellow";
-            newClr = "Yellow";
-        } else if (randNum === 4) {
-            newPage = "aqua";
-            newClr = "Aqua";
-        } else if (randNum === 5) {
-            newPage = "coral";
-            newClr = "Coral";
-        } 
+        let randNum = Math.floor(Math.random() * 141);
+        console.log(data[randNum].name);
         let page = document.getElementById("body1");
-        page.style.backgroundColor = newPage;
+        page.style.backgroundColor = data[randNum].name;
         let text = document.getElementById("clr");
-        text.innerHTML = newClr
-        ///---
-        let randNum2 = Math.floor(Math.random() * 141); 
-        console.log(data[randNum2].name);
+        text.innerHTML = data[randNum].name.toLowerCase();
+
     };
 
     const handleClick = () => {
@@ -44,10 +44,10 @@ function BodyHTML() {
     }
 
     return (
-        <div id="body1">
-            <h1>colour is:</h1>
-            <h2 id="clr">{colour}</h2>
-            <button onClick={handleClick}>plz click</button>
+        <div id="body1" className={classes.body}>
+            <h1 className={classes.h1}>colour is:</h1>
+            <h2 id="clr" className={classes.h2}>{colour}</h2>
+            <button onClick={handleClick} className={classes.btn}>plz click</button>
         </div>
 
     );
