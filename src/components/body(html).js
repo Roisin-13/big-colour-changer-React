@@ -1,5 +1,6 @@
 //import { createUseStyles } from 'react-jss';
 import {useState} from 'react';
+import data from './htmlcolour.json';
 
 function BodyHTML() {
     //const classes = useStyles();
@@ -33,10 +34,10 @@ function BodyHTML() {
         page.style.backgroundColor = newPage;
         let text = document.getElementById("clr");
         text.innerHTML = newClr
-        
+        ///---
+        let randNum2 = Math.floor(Math.random() * 141); 
+        console.log(data[randNum2].name);
     };
-
-
 
     const handleClick = () => {
         setColour(colourChange);
@@ -45,8 +46,7 @@ function BodyHTML() {
     return (
         <div id="body1">
             <h1>colour is:</h1>
-            <h2>{colour}</h2>
-            <div id="clr"></div>
+            <h2 id="clr">{colour}</h2>
             <button onClick={handleClick}>plz click</button>
         </div>
 
