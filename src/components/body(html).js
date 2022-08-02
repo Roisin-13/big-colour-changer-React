@@ -24,7 +24,7 @@ btn : {
 },
 });
 
-function BodyHTML() {
+const BodyHTML = () => {
     const classes = useStyles();
     const [colour, setColour] = useState("white");
     document.body.style.background = colour;

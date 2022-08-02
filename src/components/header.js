@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss';
+import { Link } from 'react-router-dom';
 
 const useStyles = createUseStyles({
  heady1 : {
@@ -36,9 +37,9 @@ function Header() {
         <header class={classes.heady1}>
             <h1>Colour Changer</h1>
             <ul>
-                <li class={classes.navBtn}><a href="#">HTML colours</a></li>
+                <li class={classes.navBtn}><Link to='/'>HTML colours</Link></li>
                 <li class={classes.navBtn}><a href="#">RGB colours</a></li>
-                <li class={classes.navBtn}><a href="#">HEX colours</a></li>
+                <li class={classes.navBtn}><Link to='/body(hex)'>HEX colours</Link></li>
             </ul>
         </header>
     );

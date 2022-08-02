@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function BodyHEX() {
+const BodyHEX = () => {
 
     const [colour, setColour] = useState("#ffffff");
     document.body.style.background = colour;

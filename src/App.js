@@ -1,11 +1,11 @@
 import Header from './components/header';
-import BodyHTML from './components/body(html)';
+import Main from './Main';
 
 function App() {
   return (
     <div className="App">
 <Header></Header>
-<BodyHTML></BodyHTML>
+<Main></Main>
     </div>
   );
 }
