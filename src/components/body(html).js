@@ -10,7 +10,7 @@ const BodyHTML = () => {
 
     function colourChange() {
         let randNum = Math.floor(Math.random() * 141);
-        console.log(data[randNum].name);
+        //console.log(data[randNum].name);
         let page = document.body;
         page.style.backgroundColor = data[randNum].name;
         let text = document.getElementById("clr");
@@ -26,7 +26,7 @@ const BodyHTML = () => {
         <div id="body1" className={classes.body}>
             <h1 className={classes.h1}>colour is:</h1>
             <h2 id="clr" className={classes.h2}>{colour}</h2>
-            <button onClick={handleClick} className={classes.btn}>plz click</button>
+            <button onClick={handleClick} className={classes.btn}>Click Me</button>
         </div>
 
     );
